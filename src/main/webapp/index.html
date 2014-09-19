@@ -68,7 +68,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Lift-ng Your Angular Backend | by Joe Barnes @joescii</title>
+    <title>15-Minute Chat | by Joe Barnes @joescii</title>
     
     <meta name="description" content="lift-ng is the most powerful, most secure AngularJS backend available today" />
     <meta name="author" content="Joe Barnes" />
@@ -159,8 +159,7 @@
   </div>
 
   <div id="title" class="step" data-x="-2000">
-    <h1>Lift-ng Your Angular Backend</h1>
-    <div class="follow">Follow along! http://<span data-lift="Host">localhost</span>:8080</div>
+    <h1>15-Minute Chat</h1>
   </div>
 
   <div id="joe-barnes" class="step" data-x="-1225" data-y="250" data-z="300">
@@ -201,19 +200,7 @@
       <li>Designer/Friendly: View-first w/ HTML templates</li>
       <li>Outstanding comet and ajax support</li>
       <li>Scala's oldest web framework</li>
-    </ul>
-  </div>
-
-  <div id="lift-iceberg" class="slide step app" data-x="-4500" data-z="300" data-y="-550">
-    <div data-lift="embed?what=/templates-hidden/lift-iceberg"></div>
-  </div>
-
-  <div id="lift-cool-but" class="step" data-x="-4500" data-z="300" data-y="-550" data-rotate-x="90">
-    That's cool but...
-    <ul>
-      <li>Easily turns into front-end spaghetti</li>
-      <li>Server knows a lot about view</li>
-      <li>Designed for multi-page apps</li>
+      <li>Doesn't hide web development from you</li>
     </ul>
   </div>
 
@@ -224,61 +211,27 @@
       <li>Declarative DOM manipulation</li>
       <li>Test-first</li>
       <li>Lots of powerful magic</li>
+      <li>Mixes well with Lift</li>
     </ul>
   </div>
 
-  <div id="ng-iceberg" class="step slide app" data-x="500" data-z="300" data-y="-550">
-    <div data-lift="embed?what=/templates-hidden/ng-iceberg"></div>
+  <div id="lets-build-chat" class="step" data-x="-2000" data-y="4000" data-z="300">
+    Let's build a chat application with it...
   </div>
 
-  <div id="ng-cool-but" class="step" data-x="500" data-z="300" data-y="-550" data-rotate-x="90">
-    That's cool but...
-    <ul>
-      <li>No backend!</li>
-      <li>Need RESTful http end points</li>
-    </ul>
+  <div id="chat-design" class="visible" data-x="-2000" data-y="8000" data-z="-500"></div>
+  <div id="chat-design-input" class="step" data-x="-1850" data-y="6500" data-z="0"></div>
+  <div id="chat-design-submit" class="step" data-x="-2750" data-y="8350" data-z="0"></div>
+  <div id="chat-design-service" class="step" data-x="-2500" data-y="9750" data-z="0"></div>
+  <div id="chat-design-server" class="step" data-x="-1900" data-y="10000" data-z="0"></div>
+  <div id="chat-design-binder" class="step" data-x="-1100" data-y="9500" data-z="0"></div>
+  <div id="chat-design-bind" class="step" data-x="-900" data-y="7900" data-z="0"></div>
+  <div id="chat-design-output" class="step" data-x="-1850" data-y="6000" data-z="0"></div>
+  <div id="chat-design-birdseye" class="step" data-x="-2000" data-y="8000" data-z="-500" data-scale="6"></div>
+
+  <div id="lets-code" class="step" data-x="-2000" data-y="600" data-z="2000">
+    Let's go build it!
   </div>
-
-  <div id="power-of-lift" class="step" data-x="-4500" data-z="1300" data-y="-1250">
-    Can we harness the power of Lift...
-    <ul>
-      <li>Security</li>
-      <li>Pure HTML templates</li>
-      <li>World-class async support</li>
-    </ul>
-  </div>
-
-  <div id="cleanliness-of-ng" class="step" data-x="500" data-z="1300" data-y="-1250">
-    With the cleanliness of Angular...
-    <ul>
-      <li>Declarative binding</li>
-      <li>Test-driven development</li>
-    </ul>
-  </div>
-
-  <div id="of-course" class="step" data-x="-2000" data-y="-750" data-z="2000">
-    <div>Of course!</div>
-    <i>What do you think lift-ng is??</i>
-  </div>
-
-  <div id="lift-ng-clock" class="step app slide" data-x="-2000" data-y="-750" data-z="3500">
-    <div data-lift="embed?what=/templates-hidden/lift-ng-iceberg"></div>
-  </div>
-
-  <div id="chat-design" class="visible" data-x="-2000" data-y="5000" data-z="3500"></div>
-  <div id="chat-design-input" class="step" data-x="-1850" data-y="3500" data-z="4000"></div>
-  <div id="chat-design-submit" class="step" data-x="-2750" data-y="5350" data-z="4000"></div>
-  <div id="chat-design-service" class="step" data-x="-2500" data-y="6750" data-z="4000"></div>
-  <div id="chat-design-server" class="step" data-x="-1900" data-y="7000" data-z="4000"></div>
-  <div id="chat-design-binder" class="step" data-x="-1100" data-y="6500" data-z="4000"></div>
-  <div id="chat-design-bind" class="step" data-x="-900" data-y="4900" data-z="4000"></div>
-  <div id="chat-design-output" class="step" data-x="-1850" data-y="3000" data-z="4000"></div>
-  <div id="chat-design-birdseye" class="step" data-x="-2000" data-y="5000" data-z="3500" data-scale="6"></div>
-
-  <div id="chat" class="step app slide" data-x="-500" data-y="-750" data-z="3500">
-    <div data-lift="embed?what=/templates-hidden/chat"></div>
-  </div>
-
 
   <!--
 
