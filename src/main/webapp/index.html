@@ -145,10 +145,6 @@
     right around the corner of this tag ;)
     
 -->
-<div class="hint">
-  <p>Use Page Up/Page Down to navigate</p>
-</div>
-
 <div id="impress">
 
   <div id="lift" class="visible" data-x="-2200" data-z="350" data-y="-200">
@@ -442,6 +438,7 @@
     <!---->
 <!---->-->
 </div>
+<div data-lift="Host.ifNotLocal"><div data-lift="embed?what=slide-controls"></div></div>
 <!--
     
     Last, but not least.
@@ -458,10 +455,15 @@
     
 -->
 <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
-<script data-lift="AngularJS"></script>
-<script data-lift="Angular"></script>
 <script src="js/demo.js"></script>
 <script src="js/impress.js"></script>
+<div data-lift="Host.ifNotLocal">
+  <div data-lift="comet?type=PresentationComet"></div>
+  <div data-lift="PresentationState"></div>
+</div>
+<script data-lift="Host.ifNotLocal" src="js/impress-client.js"></script>
+<script data-lift="Presenter"></script>
+<script data-lift="Host.ifLocal" src="js/impress-presenter.js"></script>
 <script>impress().init();</script>
 
 <!--

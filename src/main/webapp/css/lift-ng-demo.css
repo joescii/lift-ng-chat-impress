@@ -601,97 +601,6 @@ a:focus {
     I know, it sounds complicated ... maybe it would be easier with the code?
 */
 
-.hint {
-    /*
-        We hide the hint until presentation is started and from browsers not supporting
-        impress.js, as they will have a linear scrollable view ...
-    */
-    display: none;
-
-    /*
-        ... and give it some fixed position and nice styles.
-    */
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 200px;
-
-    background: rgba(0,0,0,0.5);
-    color: #EEE;
-    text-align: center;
-
-    font-size: 50px;
-    padding: 20px;
-
-    z-index: 100;
-
-    /*
-        By default we don't want the hint to be visible, so we make it transparent ...
-    */
-    opacity: 0;
-
-    /*
-        ... and position it below the bottom of the screen (relative to it's fixed position)
-    */
-    -webkit-transform: translateY(400px);
-    -moz-transform:    translateY(400px);
-    -ms-transform:     translateY(400px);
-    -o-transform:      translateY(400px);
-    transform:         translateY(400px);
-
-    /*
-        Now let's imagine that the hint is visible and we want to fade it out and move out
-        of the screen.
-
-        So we define the transition on the opacity property with 1s duration and another
-        transition on transform property delayed by 1s so it will happen after the fade out
-        on opacity finished.
-
-        This way user will not see the hint moving down.
-    */
-    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
-    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
-    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
-    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
-    transition:         opacity 1s,         transform 0.5s 1s;
-}
-
-/*
-    Now we 'enable' the hint when presentation is initialized ...
-*/
-.impress-enabled .hint { display: block }
-
-/*
-    ... and we will show it when the first step (with id 'bored') is active.
-*/
-.impress-on-title .hint {
-    /*
-        We remove the transparency and position the hint in its default fixed
-        position.
-    */
-    opacity: 1;
-
-    -webkit-transform: translateY(0px);
-    -moz-transform:    translateY(0px);
-    -ms-transform:     translateY(0px);
-    -o-transform:      translateY(0px);
-    transform:         translateY(0px);
-
-    /*
-        Now for fade in transition we have the oposite situation from the one
-        above.
-
-        First after 4.5s delay we animate the transform property to move the hint
-        into its correct position and after that we fade it in with opacity
-        transition.
-    */
-    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
-    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
-    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
-    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
-    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
-}
-
 /*
     And as the last thing there is a workaround for quite strange bug.
     It happens a lot in Chrome. I don't remember if I've seen it in Firefox.
@@ -713,8 +622,8 @@ a:focus {
 
     So use it wisely ... or don't use at all.
 */
-.impress-enabled          { pointer-events: none }
-.impress-enabled #impress { pointer-events: auto }
+/*.impress-enabled          { pointer-events: none }*/
+/*.impress-enabled #impress { pointer-events: auto }*/
 
 /*
     There is one funny thing I just realized.
@@ -893,3 +802,68 @@ button:active {
    top:1px;
  }
 /* This button was generated using CSSButtonGenerator.com */
+
+#slide-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 168px;
+  height: 56px;
+  display: block;
+  border: thin;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 5px;
+  margin: 5px;
+  background: rgb(214,220,222); /* Old browsers */
+}
+
+#slide-controls div {
+  width: 50px;
+  height: 50px;
+  background: url("/images/controls.png");
+  background-size: 264px 154px;
+  margin: 3px;
+  cursor: pointer;
+  float: left;
+}
+
+#slide-controls .back {
+  background-position: -214px 50px;
+}
+#slide-controls .back.enabled {
+  background-position: -214px 0;
+}
+#slide-controls .back.enabled:active {
+  background-position: -214px -52px;
+}
+
+#slide-controls .pause {
+  background-position: 0 50px;
+}
+#slide-controls .pause.enabled {
+  background-position: 0 0px;
+}
+#slide-controls .pause.enabled:active {
+  background-position: 0 -52px;
+}
+
+#slide-controls .play {
+  background-position: -108px 50px;
+}
+#slide-controls .play.enabled {
+  background-position: -108px 0px;
+}
+#slide-controls .play.enabled:active {
+  background-position: -108px -52px;
+}
+
+#slide-controls .forward {
+  background-position: -160px 50px;
+}
+#slide-controls .forward.enabled {
+  background-position: -160px 0px;
+}
+#slide-controls .forward.enabled:active {
+  background-position: -160px -52px;
+}
